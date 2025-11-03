@@ -1,4 +1,4 @@
-import type { Title } from "../../interface/common";
+import type { TitleProps } from "../../interface/common";
 
 const Title = ({
   title1,
@@ -7,7 +7,7 @@ const Title = ({
   title1Styles,
   paraStyles,
   para,
-}: Title) => {
+}: TitleProps) => {
   return (
     <div className={titleStyles}>
       <h3 className={`${title1Styles} h-3 capitalize `}>
