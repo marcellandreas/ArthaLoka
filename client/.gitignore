@@ -6,11 +6,18 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-./env
+env
+.env
 node_modules
 dist
 dist-ssr
 *.local
+
+# Ignore specific Item component files
+src/components/Item2.tsx
+src/components/Item3.tsx
+src/components/Item4.tsx
+
 
 # Editor directories and files
 .vscode/*
