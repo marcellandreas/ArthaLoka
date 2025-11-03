@@ -1,3 +1,6 @@
+import type { ReactNode } from "react";
+import type { NavigateFunction } from "react-router-dom";
+
 export interface Category {
   name: string;
   image: string;
@@ -51,4 +54,16 @@ export interface Order {
   isPaid: boolean;
   status: string;
   createdAt: string;
+}
+
+export interface ShopContextType {
+  books: Book[];
+  navigate: NavigateFunction;
+  user: any;
+  setUser: React.Dispatch<React.SetStateAction<any>>;
+  currency: string;
+}
+
+export interface ShopContextProviderProps {
+  children: ReactNode;
 }
