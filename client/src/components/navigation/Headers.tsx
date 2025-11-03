@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { FaBars, FaBarsStaggered } from "react-icons/fa6";
+import { RiUserLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import userImg from "../../assets/user.png";
-import { FaBars, FaBarsStaggered } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
+import { useShopContext } from "../../contexts/ShopContext";
 import Navbar from "./Navbar";
-import { RiUserLine } from "react-icons/ri";
 
 const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [user, setUser] = useState(true);
-
-  const navigate = useNavigate();
+  const { navigate, user } = useShopContext();
 
   useEffect(() => {
     const handleResize = () => {
