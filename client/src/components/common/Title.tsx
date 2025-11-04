@@ -10,7 +10,7 @@ const Title = ({
 }: TitleProps) => {
   return (
     <div className={titleStyles}>
-      <h3 className={`${title1Styles} h-3 capitalize `}>
+      <h3 className={`${title1Styles} h3 capitalize `}>
         {title1}
         <span className=" font-medium underline">{title2}</span>
       </h3>
