@@ -11,9 +11,8 @@ const Categories = () => {
       <Title
         title1="Category"
         title2="List"
-        titleStyles=""
-        title1Styles="pb-6"
-        paraStyles="hidden"
+        titleStyles="pb-6"
+        title1Styles="pt-6"
         para=""
       />
       {/* container */}
