@@ -1,8 +1,7 @@
-import React from "react";
-import { useShopContext } from "../contexts/ShopContext";
-import Title from "./common/Title";
 import { TbShoppingBagPlus } from "react-icons/tb";
 import featuresBooksImg from "../assets/featured-books.png";
+import { useShopContext } from "../contexts/ShopContext";
+import Title from "./common/Title";
 
 const FeaturedBooks = () => {
   const { books, currency } = useShopContext();
