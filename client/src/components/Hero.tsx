@@ -6,21 +6,17 @@ import { FaArrowRight } from "react-icons/fa";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
-
 // import required modules
 import { Autoplay } from "swiper/modules";
+
 import type { Book } from "../interface/data";
 import Item from "./Item";
 import { useShopContext } from "../contexts/ShopContext";
 
 const Hero = () => {
-  // const {books} = useContext(ShopContext)
   const { books } = useShopContext();
-
-  console.log(books);
   const [popularBooks, setPopularBooks] = useState<Book[]>([]);
 
   // getting popular books data
