@@ -11,6 +11,7 @@ export interface Book {
   name: string;
   image: string;
   price: number;
+  offerPrice: number;
   description: string;
   category: string;
   date: number;
