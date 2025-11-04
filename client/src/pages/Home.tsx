@@ -1,12 +1,13 @@
-import React from "react";
-import Hero from "../components/Hero";
 import Categories from "../components/Categories";
+import Hero from "../components/Hero";
+import NewArrival from "../components/NewArrival";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <Categories />
+      <NewArrival />
     </>
   );
 };
