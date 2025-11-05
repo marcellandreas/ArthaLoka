@@ -15,6 +15,7 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const navigate = useNavigate();
   const [books, setBooks] = useState<Book[]>([]);
   const [user, setUser] = useState<any>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const currency = import.meta.env.VITE_CURRENCY as string;
 
   // fetch all books
@@ -26,7 +27,16 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     fetchBooks();
   }, []);
 
-  const value: ShopContextType = { books, navigate, user, setUser, currency };
+  const value: ShopContextType = {
+    books,
+    setBooks,
+    navigate,
+    user,
+    setUser,
+    currency,
+    searchQuery,
+    setSearchQuery,
+  };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 
