@@ -59,6 +59,7 @@ export interface Order {
 
 export interface ShopContextType {
   books: Book[];
+  setBooks: React.Dispatch<React.SetStateAction<Book[]>>;
   navigate: NavigateFunction;
   user: any;
   setUser: React.Dispatch<React.SetStateAction<any>>;
