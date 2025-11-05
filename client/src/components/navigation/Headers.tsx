@@ -11,7 +11,7 @@ import Navbar from "./Navbar";
 const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const { navigate, user } = useShopContext();
+  const { navigate, user, setSearchQuery } = useShopContext();
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,6 +69,7 @@ const Headers = () => {
             }`}
           >
             <input
+              onChange={(e) => setSearchQuery(e.target.value)}
               type="text"
               placeholder="Search Book..."
               className=" bg-transparent w-full text-sm outline-none pr-10 placeholder:text-gray-400"
