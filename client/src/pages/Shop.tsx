@@ -41,6 +41,38 @@ const Shop = () => {
           <h4 className="h4">Oops! Nothing matched your search</h4>
         )}
       </div>
+      {/* pagination */}
+      <div className="flexCenter flex-wrap gap-2 sm:gap-4 mt-14  mb-10">
+        <button
+          disabled={currPage === 1}
+          onClick={() => setCurrPage((prev) => prev - 1)}
+          className={`${
+            currPage === 1 && "opacity-50  cursor-not-allowed"
+          } btn-dark py-1 px-3`}
+        >
+          Previous
+        </button>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => setCurrPage(index + 1)}
+            className={`${
+              currPage === index + 1 && " bg-secondary text-white"
+            } btn-dark py-1 px-3`}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button
+          disabled={currPage === totalPages}
+          onClick={() => setCurrPage((prev) => prev + 1)}
+          className={`${
+            currPage === totalPages && "opacity-50  cursor-not-allowed"
+          } btn-white bg-tertiary py-1 px-3`}
+        >
+          Next
+        </button>
+      </div>
     </section>
   );
 };
