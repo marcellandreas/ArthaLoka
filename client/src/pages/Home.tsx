@@ -1,3 +1,4 @@
+import Achievements from "../components/Achievements";
 import Categories from "../components/Categories";
 import FeaturedBooks from "../components/FeaturedBooks";
 import Hero from "../components/Hero";
@@ -12,6 +13,7 @@ const Home = () => {
       <NewArrival />
       <FeaturedBooks />
       <PopularBooks />
+      <Achievements />
     </>
   );
 };
