@@ -63,6 +63,8 @@ export interface ShopContextType {
   user: any;
   setUser: React.Dispatch<React.SetStateAction<any>>;
   currency: string;
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<any>>;
 }
 
 export interface ShopContextProviderProps {
