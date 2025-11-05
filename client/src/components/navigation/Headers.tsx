@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaBars, FaBarsStaggered } from "react-icons/fa6";
 import { RiUserLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import userImg from "../../assets/user.png";
 import { useShopContext } from "../../contexts/ShopContext";
@@ -11,14 +11,21 @@ import Navbar from "./Navbar";
 const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const { navigate, user, setSearchQuery } = useShopContext();
+  const { navigate, user, setSearchQuery, searchQuery } = useShopContext();
+  const isShopPage = useLocation().pathname.endsWith("/shop");
+
+  useEffect(() => {
+    if (searchQuery.length > 0 && !isShopPage) {
+      navigate("/shop");
+    }
+  }, [searchQuery]);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setMenuOpened(true); // buka menu kalau mobile
+        setMenuOpened(true);
       } else {
-        setMenuOpened(false); // tutup menu kalau desktop
+        setMenuOpened(false);
       }
     };
 
