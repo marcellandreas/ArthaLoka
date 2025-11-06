@@ -12,9 +12,12 @@ const Item = ({ book, fromHero }: ItemProps) => {
   const { navigate, currency } = useShopContext();
   return book ? (
     <div
+      onClick={() => {
+        navigate(`/shop/${book.category}/${book._id}`);
+      }}
       className={`overflow-hidden sm:p-4 ${
         fromHero ? "bg-white" : "sm:bg-primary"
-      } rounded-xl`}
+      } rounded-xl cursor-pointer`}
     >
       {/* imgae */}
       <div className=" overflow-hidden rounded-xl shadow-[0px_0px_2px_0px_rgba(0,0,0,0.1)]">
