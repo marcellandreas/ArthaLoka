@@ -1,7 +1,6 @@
-import React from "react";
-import type { Book } from "../interface/data";
-import { useShopContext } from "../contexts/ShopContext";
 import { TbShoppingBagPlus } from "react-icons/tb";
+import { useShopContext } from "../contexts/ShopContext";
+import type { Book } from "../interface/data";
 
 interface ItemProps {
   book: Book;
@@ -21,7 +20,7 @@ const Item = ({ book, fromHero }: ItemProps) => {
     >
       {/* imgae */}
       <div className=" overflow-hidden rounded-xl shadow-[0px_0px_2px_0px_rgba(0,0,0,0.1)]">
-        <img src={book.image} alt={book.name} className=" rounded-lg" />
+        <img src={book.image[0]} alt={book.name} className=" rounded-lg" />
       </div>
       {/* info */}
       <div className="pt-4">
