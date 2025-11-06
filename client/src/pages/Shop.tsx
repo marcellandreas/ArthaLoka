@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Title from "../components/common/Title";
 import { useShopContext } from "../contexts/ShopContext";
 import Item from "../components/Item";
 import type { Book } from "../interface/data";
 
 const Shop = () => {
-  const { books, searchQuery, setSearchQuery } = useShopContext();
+  const { books, searchQuery } = useShopContext();
   const [filteresBooks, setFilteresBooks] = useState<Book[]>([]);
   const [currPage, setCurrPage] = useState(1);
   const itemsPerPage = 10;
@@ -27,6 +27,11 @@ const Shop = () => {
   const totalPages = Math.ceil(
     filteresBooks.filter((b) => b.inStock).length / itemsPerPage
   );
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currPage]);
+
   return (
     <section className=" max-padd-container py-16 pt-28">
       <Title title1="All" title2="Books" titleStyles="pb-10" />
