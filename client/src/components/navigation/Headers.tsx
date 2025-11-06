@@ -12,7 +12,8 @@ const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const { navigate, user, setSearchQuery, searchQuery } = useShopContext();
-  const isShopPage = useLocation().pathname.endsWith("/shop");
+  // const isShopPage = useLocation().pathname.endsWith("/shop");
+  const isShopPage = useLocation().pathname.startsWith("/shop");
 
   useEffect(() => {
     if (searchQuery.length > 0 && !isShopPage) {
