@@ -9,7 +9,7 @@ export interface Category {
 export interface Book {
   _id: string;
   name: string;
-  image: string;
+  image: string[];
   price: number;
   offerPrice: number;
   description: string;
