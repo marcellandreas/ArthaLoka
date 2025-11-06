@@ -96,7 +96,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "1",
     name: "Foundations of Science",
-    image: book_1,
+    image: [book_1],
     price: 15,
     offerPrice: 12,
     description:
@@ -109,7 +109,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "2",
     name: "Everyday Math Explained",
-    image: book_2,
+    image: [book_2],
     price: 20,
     offerPrice: 16,
     description:
@@ -122,7 +122,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "3",
     name: "Basics of Chemistry",
-    image: book_3,
+    image: [book_3],
     price: 10,
     offerPrice: 8,
     description:
@@ -135,7 +135,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "4",
     name: "Tech and Logic Essentials",
-    image: book_4,
+    image: [book_4],
     price: 25,
     offerPrice: 20,
     description:
@@ -148,7 +148,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "5",
     name: "World Events and Ideas",
-    image: book_5,
+    image: [book_5],
     price: 15,
     offerPrice: 13,
     description:
@@ -161,7 +161,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "6",
     name: "Understanding Life Science",
-    image: book_6,
+    image: [book_6],
     price: 18,
     offerPrice: 15,
     description:
@@ -176,7 +176,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "7",
     name: "The Magic Treehouse",
-    image: book_7,
+    image: [book_7],
     price: 12,
     offerPrice: 10,
     description:
@@ -189,7 +189,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "8",
     name: "Animal Friends Forever",
-    image: book_8,
+    image: [book_8],
     price: 14,
     offerPrice: 12,
     description:
@@ -202,7 +202,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "9",
     name: "Fairyland Dreams",
-    image: book_9,
+    image: [book_9],
     price: 18,
     offerPrice: 15,
     description:
@@ -215,7 +215,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "10",
     name: "Super Jack and the Dragon",
-    image: book_10,
+    image: [book_10],
     price: 20,
     offerPrice: 17,
     description:
@@ -228,7 +228,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "11",
     name: "Treasure Island Map",
-    image: book_11,
+    image: [book_11],
     price: 15,
     offerPrice: 13,
     description:
@@ -241,7 +241,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "12",
     name: "Kids in Space",
-    image: book_12,
+    image: [book_12],
     price: 17,
     offerPrice: 14,
     description:
@@ -256,7 +256,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "13",
     name: "Healthy Living Guide",
-    image: book_13,
+    image: [book_13],
     price: 20,
     offerPrice: 16,
     description:
@@ -269,7 +269,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "14",
     name: "Yoga and You",
-    image: book_14,
+    image: [book_14],
     price: 18,
     offerPrice: 15,
     description:
@@ -282,7 +282,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "15",
     name: "Nutrition Simplified",
-    image: book_15,
+    image: [book_15],
     price: 15,
     offerPrice: 13,
     description:
@@ -295,7 +295,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "16",
     name: "Rest and Recharge",
-    image: book_16,
+    image: [book_16],
     price: 22,
     offerPrice: 18,
     description:
@@ -308,7 +308,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "17",
     name: "Quick Fitness Plan",
-    image: book_17,
+    image: [book_17],
     price: 25,
     offerPrice: 20,
     description:
@@ -321,7 +321,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "18",
     name: "Nature Heals",
-    image: book_18,
+    image: [book_18],
     price: 18,
     offerPrice: 15,
     description:
@@ -336,7 +336,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "19",
     name: "Whispers in the Dark",
-    image: book_19,
+    image: [book_19],
     price: 30,
     offerPrice: 25,
     description:
@@ -349,7 +349,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "20",
     name: "The Haunted Woods",
-    image: book_20,
+    image: [book_20],
     price: 25,
     offerPrice: 21,
     description:
@@ -362,7 +362,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "21",
     name: "Voices from the Grave",
-    image: book_21,
+    image: [book_21],
     price: 18,
     offerPrice: 15,
     description:
@@ -375,7 +375,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "22",
     name: "Night of the Shadows",
-    image: book_22,
+    image: [book_22],
     price: 22,
     offerPrice: 18,
     description:
@@ -388,7 +388,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "23",
     name: "The Mirror's Curse",
-    image: book_23,
+    image: [book_23],
     price: 28,
     offerPrice: 23,
     description:
@@ -401,7 +401,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "24",
     name: "Basement of Bones",
-    image: book_24,
+    image: [book_24],
     price: 30,
     offerPrice: 25,
     description:
@@ -416,7 +416,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "25",
     name: "Start Your Own Business",
-    image: book_25,
+    image: [book_25],
     price: 22,
     offerPrice: 18,
     description:
@@ -429,7 +429,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "26",
     name: "Brand Like a Pro",
-    image: book_26,
+    image: [book_26],
     price: 24,
     offerPrice: 20,
     description:
@@ -442,7 +442,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "27",
     name: "Lead with Purpose",
-    image: book_27,
+    image: [book_27],
     price: 26,
     offerPrice: 22,
     description:
@@ -455,7 +455,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "28",
     name: "Finance for Everyone",
-    image: book_28,
+    image: [book_28],
     price: 18,
     offerPrice: 15,
     description:
@@ -468,7 +468,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "29",
     name: "Mastering Negotiation",
-    image: book_29,
+    image: [book_29],
     price: 22,
     offerPrice: 18,
     description:
@@ -481,7 +481,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "30",
     name: "Productivity Hacks",
-    image: book_30,
+    image: [book_30],
     price: 20,
     offerPrice: 17,
     description:
@@ -496,7 +496,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "31",
     name: "Ancient Civilizations",
-    image: book_31,
+    image: [book_31],
     price: 15,
     offerPrice: 12,
     description:
@@ -509,7 +509,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "32",
     name: "World War Chronicles",
-    image: book_32,
+    image: [book_32],
     price: 18,
     offerPrice: 15,
     description:
@@ -522,7 +522,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "33",
     name: "Leaders Who Changed the World",
-    image: book_33,
+    image: [book_33],
     price: 12,
     offerPrice: 10,
     description:
@@ -535,7 +535,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "34",
     name: "The Rise and Fall of Empires",
-    image: book_34,
+    image: [book_34],
     price: 20,
     offerPrice: 17,
     description:
@@ -548,7 +548,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "35",
     name: "History of Inventions",
-    image: book_35,
+    image: [book_35],
     price: 22,
     offerPrice: 18,
     description:
@@ -561,7 +561,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "36",
     name: "Explorers and Voyages",
-    image: book_36,
+    image: [book_36],
     price: 25,
     offerPrice: 21,
     description:
@@ -576,7 +576,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "37",
     name: "Into the Unknown",
-    image: book_37,
+    image: [book_37],
     price: 16,
     offerPrice: 13,
     description:
@@ -589,7 +589,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "38",
     name: "Lost in the Jungle",
-    image: book_38,
+    image: [book_38],
     price: 19,
     offerPrice: 15,
     description: "Lost in the Jungle",
@@ -601,7 +601,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "39",
     name: "Mountains of Mystery",
-    image: book_39,
+    image: [book_39],
     price: 20,
     offerPrice: 17,
     description:
@@ -614,7 +614,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "40",
     name: "The Desert Odyssey",
-    image: book_40,
+    image: [book_40],
     price: 23,
     offerPrice: 19,
     description:
@@ -627,7 +627,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "41",
     name: "Caves of Wonder",
-    image: book_41,
+    image: [book_41],
     price: 22,
     offerPrice: 18,
     description:
@@ -640,7 +640,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "42",
     name: "Frozen Expedition",
-    image: book_42,
+    image: [book_42],
     price: 21,
     offerPrice: 17,
     description:
