@@ -8,10 +8,13 @@ import {
 } from "react-icons/tb";
 import { Link, useParams } from "react-router-dom";
 import { useShopContext } from "../contexts/ShopContext";
+import ProductDescription from "../components/products/ProductDescription";
+import ProductFeatures from "../components/products/ProductFeatures";
+import RelatedBook from "../components/products/RelatedBook";
 
 const ProductDetails = () => {
   const { books, currency } = useShopContext();
-  const { id } = useParams();
+  const { id } = useParams<{ id?: string }>();
 
   const book = books.find((book) => book._id === id);
   const [image, setImage] = useState<string>("null");
@@ -101,6 +104,9 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+        <ProductDescription />
+        <ProductFeatures />
+        <RelatedBook book={book} id={id} />
       </div>
     )
   );
