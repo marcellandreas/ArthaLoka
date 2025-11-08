@@ -96,7 +96,7 @@ export const dummyBooks: Book[] = [
   {
     _id: "1",
     name: "Foundations of Science",
-    image: [book_1],
+    image: [book_1, book_10, book_11],
     price: 15,
     offerPrice: 12,
     description:
