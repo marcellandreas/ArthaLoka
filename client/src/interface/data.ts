@@ -66,6 +66,12 @@ export interface ShopContextType {
   currency: string;
   searchQuery: string;
   setSearchQuery: React.Dispatch<React.SetStateAction<any>>;
+  addToCart: {};
+  getCartAmount: {};
+  getCartCount: {};
+  updateQuantity: {};
+  setCartItems: React.Dispatch<React.SetStateAction<any>>;
+  cartItems: {};
 }
 
 export interface ShopContextProviderProps {

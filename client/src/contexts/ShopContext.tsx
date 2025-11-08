@@ -17,10 +17,60 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const [user, setUser] = useState<any>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const currency = import.meta.env.VITE_CURRENCY as string;
+  const [cartItems, setCartItems] = useState<Record<string, number>>({});
 
   // fetch all books
   const fetchBooks = () => {
     setBooks(dummyBooks);
+  };
+
+  // adding items to cart
+  const addToCart = (itemId: string) => {
+    const cartData = { ...cartItems };
+
+    if (cartData[itemId]) {
+      cartData[itemId] += 1;
+    } else {
+      cartData[itemId] = 1;
+    }
+
+    setCartItems(cartData);
+  };
+
+  // getting totoal cart items
+  const getCartCount = () => {
+    let totalCount = 0;
+    for (const itemId in cartItems) {
+      try {
+        if (cartItems[itemId] > 0) {
+          totalCount += cartItems[itemId];
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    return totalCount;
+  };
+
+  // update  the quantity of item
+  const updateQuantity = (itemId: any, quantity: any) => {
+    const cartData = { ...cartItems };
+    cartData[itemId] = quantity;
+    setCartItems(cartData);
+  };
+
+  // getting getCartAmount
+  const getCartAmount = () => {
+    let totalAmount = 0;
+    for (const itemId in cartItems) {
+      if (cartItems[itemId] > 0) {
+        let itemInfo = books.find((book) => book._id === itemId);
+        if (itemInfo) {
+          totalAmount += itemInfo.offerPrice * cartItems[itemId];
+        }
+      }
+    }
+    return totalAmount;
   };
 
   useEffect(() => {
@@ -36,6 +86,12 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     currency,
     searchQuery,
     setSearchQuery,
+    cartItems,
+    setCartItems,
+    addToCart,
+    getCartAmount,
+    getCartCount,
+    updateQuantity,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
