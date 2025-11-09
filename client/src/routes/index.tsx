@@ -7,6 +7,7 @@ import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import Cart from "../pages/Cart";
 import AddressForm from "../pages/AddressForm";
+import MyOders from "../pages/MyOders";
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/address-form" element={<AddressForm />} />
+      <Route path="/my-orders" element={<MyOders />} />
     </Routes>
   );
 };
