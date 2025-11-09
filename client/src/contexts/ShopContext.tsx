@@ -17,7 +17,7 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const [user, setUser] = useState<any>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const currency = import.meta.env.VITE_CURRENCY as string;
-  const [cartItems, setCartItems] = useState<Record<string, number>>({});
+  const [cartItems, setCartItems] = useState<{ [key: string]: number }>({});
 
   // fetch all books
   const fetchBooks = () => {
@@ -53,7 +53,7 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   };
 
   // update  the quantity of item
-  const updateQuantity = (itemId: any, quantity: any) => {
+  const updateQuantity = (itemId: string, quantity: number): void => {
     const cartData = { ...cartItems };
     cartData[itemId] = quantity;
     setCartItems(cartData);
