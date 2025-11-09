@@ -34,7 +34,10 @@ const Item = ({ book, fromHero }: ItemProps) => {
         <div className="flex justify-between items-start gap-2 mt-1">
           <p className=" line-clamp-1">{book.description}</p>
           <button
-            onClick={() => addToCart(book._id)}
+            onClick={(e) => {
+              addToCart(book._id);
+              e.stopPropagation();
+            }}
             className=" cursor-pointer"
           >
             <TbShoppingBagPlus className=" text-xl" />
