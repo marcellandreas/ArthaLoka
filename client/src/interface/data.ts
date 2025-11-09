@@ -72,6 +72,9 @@ export interface ShopContextType {
   getCartCount: () => number;
   setCartItems: React.Dispatch<React.SetStateAction<any>>;
   cartItems: { [key: string]: number };
+  method: string;
+  setMethod: React.Dispatch<React.SetStateAction<string>>;
+  delivery_charges: number;
 }
 
 export interface ShopContextProviderProps {
