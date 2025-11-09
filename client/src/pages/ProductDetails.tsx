@@ -13,7 +13,7 @@ import ProductFeatures from "../components/products/ProductFeatures";
 import RelatedBook from "../components/products/RelatedBook";
 
 const ProductDetails = () => {
-  const { books, currency } = useShopContext();
+  const { books, currency, addToCart, cartItems } = useShopContext();
   const { id } = useParams<{ id?: string }>();
 
   const book = books.find((book) => book._id === id);
@@ -24,6 +24,10 @@ const ProductDetails = () => {
       setImage(book.image[0]);
     }
   }, [book]);
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [addToCart]);
 
   return (
     book && (
@@ -82,7 +86,10 @@ const ProductDetails = () => {
             </div>
             <p className="max-w-[55p5x]">{book.description}</p>
             <div className="flex items-center gap-x-4 mt-6">
-              <button className="btn-dark sm:w-1/2 flexCenter gap-x-2 capitalize rounded-md">
+              <button
+                onClick={() => addToCart(book._id)}
+                className="btn-dark sm:w-1/2 flexCenter gap-x-2 capitalize rounded-md"
+              >
                 Add to Cart
                 <TbShoppingBag className=" text-xl" />
               </button>
