@@ -11,7 +11,8 @@ import Navbar from "./Navbar";
 const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const { navigate, user, setSearchQuery, searchQuery } = useShopContext();
+  const { navigate, user, setSearchQuery, searchQuery, getCartCount } =
+    useShopContext();
   // const isShopPage = useLocation().pathname.endsWith("/shop");
   const isShopPage = useLocation().pathname.startsWith("/shop");
 
@@ -110,7 +111,7 @@ const Headers = () => {
           <div className=" bold-16">
             Cart{" "}
             <span className=" bg-secondary text-white text-[12px] font-semibold absolute -top-3.5 -right-2 flexCenter w-4 h-4 rounded-full shadow-md">
-              0
+              {getCartCount()}
             </span>
           </div>
         </Link>
