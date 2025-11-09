@@ -3,7 +3,7 @@ export interface InputChangeEvent
     HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
   > {}
 
-export interface AddressForm {
+export interface AddressFormType {
   firstName: string;
   lastName: string;
   email: string;

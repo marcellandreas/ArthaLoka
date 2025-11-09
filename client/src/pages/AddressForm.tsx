@@ -1,11 +1,11 @@
 import { useState } from "react";
 import CartTotal from "../components/cart/CartTotal";
 import Title from "../components/common/Title";
-import type { AddressForm, InputChangeEvent } from "../interface/form";
+import type { AddressFormType, InputChangeEvent } from "../interface/form";
 
 const AddressForm = () => {
   // const { navigate, user } = useShopContext();
-  const [address, setAddress] = useState<AddressForm>({
+  const [address, setAddress] = useState<AddressFormType>({
     firstName: "",
     lastName: "",
     email: "",
