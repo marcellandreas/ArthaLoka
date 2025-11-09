@@ -5,6 +5,8 @@ import CategoryShop from "../pages/CategoryShop";
 import ProductDetails from "../pages/ProductDetails";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import Cart from "../pages/Cart";
+import AddressForm from "../pages/AddressForm";
 
 const AppRouter = () => {
   return (
@@ -15,6 +17,8 @@ const AppRouter = () => {
       <Route path="/shop/:category/:id" element={<ProductDetails />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/address-form" element={<AddressForm />} />
     </Routes>
   );
 };
