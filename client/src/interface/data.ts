@@ -75,8 +75,10 @@ export interface ShopContextType {
   method: string;
   setMethod: React.Dispatch<React.SetStateAction<string>>;
   delivery_charges: number;
-  showUserLogin: string;
-  setShowUserLogin: React.Dispatch<React.SetStateAction<string>>;
+  showUserLogin: boolean;
+  setShowUserLogin: React.Dispatch<React.SetStateAction<boolean>>;
+  isAdmin: boolean;
+  setIsAdmin: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ShopContextProviderProps {

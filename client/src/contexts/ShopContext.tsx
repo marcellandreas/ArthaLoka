@@ -20,7 +20,8 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
   const [cartItems, setCartItems] = useState<{ [key: string]: number }>({});
   const [method, setMethod] = useState<string>("COD");
   const delivery_charges: number = 10;
-  const [showUserLogin, setShowUserLogin] = useState<string>("");
+  const [showUserLogin, setShowUserLogin] = useState<any>(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   // fetch all books
   const fetchBooks = () => {
@@ -100,6 +101,8 @@ export const ShopContextProvider = ({ children }: ShopContextProviderProps) => {
     delivery_charges,
     showUserLogin,
     setShowUserLogin,
+    isAdmin,
+    setIsAdmin,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
