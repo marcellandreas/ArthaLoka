@@ -8,8 +8,12 @@ import Contact from "../pages/Contact";
 import Cart from "../pages/Cart";
 import AddressForm from "../pages/AddressForm";
 import MyOders from "../pages/MyOders";
+import { useShopContext } from "../contexts/ShopContext";
+import Sidebar from "../components/navigation/Sidebar";
+import AdminLogin from "../components/admin/auth/AdminLogin";
 
 const AppRouter = () => {
+  const { isAdmin } = useShopContext();
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -21,6 +25,7 @@ const AppRouter = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/address-form" element={<AddressForm />} />
       <Route path="/my-orders" element={<MyOders />} />
+      <Route path="/admin" element={isAdmin ? <Sidebar /> : <AdminLogin />} />
     </Routes>
   );
 };
