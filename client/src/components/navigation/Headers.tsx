@@ -11,8 +11,14 @@ import Navbar from "./Navbar";
 const Headers = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const { navigate, user, setSearchQuery, searchQuery, getCartCount } =
-    useShopContext();
+  const {
+    navigate,
+    user,
+    setSearchQuery,
+    searchQuery,
+    getCartCount,
+    setShowUserLogin,
+  } = useShopContext();
   // const isShopPage = useLocation().pathname.endsWith("/shop");
   const isShopPage = useLocation().pathname.startsWith("/shop");
 
@@ -123,7 +129,10 @@ const Headers = () => {
                 <img src={userImg} alt="user profile" height={44} width={44} />
               </div>
             ) : (
-              <button className="btn-light flexCenter gap-x-2">
+              <button
+                onClick={() => setShowUserLogin(true)}
+                className="btn-light flexCenter gap-x-2"
+              >
                 Login <RiUserLine className=" text-xl" />
               </button>
             )}
