@@ -13,6 +13,7 @@ const Item = ({ book, fromHero }: ItemProps) => {
     <div
       onClick={() => {
         navigate(`/shop/${book.category}/${book._id}`);
+        scrollTo(0, 0);
       }}
       className={`overflow-hidden sm:p-4 ${
         fromHero ? "bg-white" : "sm:bg-primary"
