@@ -17,12 +17,12 @@ const Sidebar = () => {
   return (
     <div className=" mx-auto max-w-[1440px] flex flex-col sm:flex-row">
       {/* sidebar */}
-      <div className=" max-sm:flex-center max-sm:pb-3 bg-primary pb-3 m-2 sm:min-w-[20%] sm:min-h-[97hv] rounded-xl">
+      <div className=" max-sm:flex-center max-sm:pb-3 bg-primary pb-3 m-2 sm:min-w-[20%] sm:min-h-[97vh] rounded-xl">
         <div className="flex flex-col gap-y-6 max-sm:items-center sm:flex-col pt-4 sm:pt-14">
           {/* logo */}
           <Link
             to={"/admin"}
-            className="bold-20 md:bold-24 uppercase font-paci flex-col sm:pt-14"
+            className="bold-20 md:bold-24 uppercase font-paci flex-col sm:pl-14"
           >
             ArthaLoka<span className=" text-secondary bold-28">.</span>
           </Link>
