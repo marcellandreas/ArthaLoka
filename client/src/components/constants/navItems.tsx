@@ -4,7 +4,11 @@ import { MdFactCheck } from "react-icons/md";
 import { TbBrandBlogger, TbHome } from "react-icons/tb";
 import { IoLibraryOutline } from "react-icons/io5";
 import { PiEnvelopeDuotone } from "react-icons/pi";
-import type { NavItemAdmin, NavItemUser } from "../../interface/navigation";
+import type {
+  linkSectionsFooterProps,
+  NavItemAdmin,
+  NavItemUser,
+} from "../../interface/navigation";
 
 export const navItemsAdmin: NavItemAdmin[] = [
   { path: "/admin", label: "Add Item", icon: <FaSquarePlus /> },
@@ -20,5 +24,26 @@ export const navItemUser: NavItemUser[] = [
     to: "mailto:marcellandreas.123@gmail.com",
     label: "Contact",
     icon: <PiEnvelopeDuotone />,
+  },
+];
+
+export const linkSectionsFooter: linkSectionsFooterProps[] = [
+  {
+    title: "Quick Links",
+    links: ["Home", "Best Sellers", "Offers & Deals", "Contact Us", "FAQS"],
+  },
+  {
+    title: "Need Help?",
+    links: [
+      "Delivery Information",
+      "Return & Refund Policy",
+      "Payment Methods",
+      "Track your Order",
+      "Contact Us",
+    ],
+  },
+  {
+    title: "Follow Us",
+    links: ["Instagram", "Twitter", "Facebook", "YouTube"],
   },
 ];
