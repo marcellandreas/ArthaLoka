@@ -1,28 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
+import { linkSectionsFooter } from "../constants/navItems";
 
 const Footer = () => {
-  const linkSections = [
-    {
-      title: "Quick Links",
-      links: ["Home", "Best Sellers", "Offers & Deals", "Contact Us", "FAQS"],
-    },
-    {
-      title: "Need Help?",
-      links: [
-        "Delivery Information",
-        "Return & Refund Policy",
-        "Payment Methods",
-        "Track your Order",
-        "Contact Us",
-      ],
-    },
-    {
-      title: "Follow Us",
-      links: ["Instagram", "Twitter", "Facebook", "YouTube"],
-    },
-  ];
+  const linkSections = linkSectionsFooter;
 
   return (
     <footer className="max-padd-container bg-linear-to-l via-white to-primary">
