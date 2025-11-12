@@ -1,5 +1,5 @@
 import { BiLogOut } from "react-icons/bi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { navItemsAdmin } from "../constants/navItems";
 
 const Sidebar = () => {
@@ -42,6 +42,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
+      <Outlet />
     </div>
   );
 };
