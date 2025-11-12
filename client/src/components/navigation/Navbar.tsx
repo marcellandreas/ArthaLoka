@@ -1,8 +1,6 @@
 import React from "react";
-import { IoLibraryOutline } from "react-icons/io5";
-import { PiEnvelopeDuotone } from "react-icons/pi";
-import { TbBrandBlogger, TbHome } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
+import { navItemUser } from "../constants/navItems";
 
 type NavbarProps = {
   setMenuOpened: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,16 +8,7 @@ type NavbarProps = {
 };
 
 const Navbar = ({ setMenuOpened, containerStyles }: NavbarProps) => {
-  const navItem = [
-    { to: "/", label: "Home", icon: <TbHome /> },
-    { to: "/shop", label: "Shop", icon: <IoLibraryOutline /> },
-    { to: "/blog", label: "Blog", icon: <TbBrandBlogger /> },
-    {
-      to: "mailto:marcellandreas.123@gmail.com",
-      label: "Contact",
-      icon: <PiEnvelopeDuotone />,
-    },
-  ];
+  const navItem = navItemUser;
   return (
     <nav className={containerStyles}>
       {navItem.map(({ to, label, icon }) => (
