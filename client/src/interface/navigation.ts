@@ -8,3 +8,8 @@ export interface NavItemUser {
   label: string;
   icon: React.ReactNode;
 }
+
+export interface linkSectionsFooterProps {
+  title: string;
+  links: string[];
+}
