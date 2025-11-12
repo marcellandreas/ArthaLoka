@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Title from "../components/common/Title";
 import { useShopContext } from "../contexts/ShopContext";
 import Item from "../components/Item";
-import type { Book } from "../interface/data";
+import type { Book } from "../types/data";
 import { useParams } from "react-router-dom";
 
 const CategoryShop = () => {

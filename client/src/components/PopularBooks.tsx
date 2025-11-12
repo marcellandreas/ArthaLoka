@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useShopContext } from "../contexts/ShopContext";
-import type { Book } from "../interface/data";
+import type { Book } from "../types/data";
 import Title from "./common/Title";
 
 // Import Swiper React components

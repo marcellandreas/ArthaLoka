@@ -11,7 +11,7 @@ import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper/modules";
 
-import type { Book } from "../interface/data";
+import type { Book } from "../types/data";
 import Item from "./Item";
 import { useShopContext } from "../contexts/ShopContext";
 

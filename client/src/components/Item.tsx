@@ -1,6 +1,6 @@
 import { TbShoppingBagPlus } from "react-icons/tb";
 import { useShopContext } from "../contexts/ShopContext";
-import type { Book } from "../interface/data";
+import type { Book } from "../types/data";
 
 interface ItemProps {
   book: Book;

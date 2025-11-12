@@ -1,4 +1,4 @@
-import type { TitleProps } from "../../interface/common";
+import type { TitleProps } from "../../types/common";
 
 const Title = ({
   title1,

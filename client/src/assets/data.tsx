@@ -58,7 +58,7 @@ import blog5 from "../assets/blogs/blog5.jpg";
 import blog6 from "../assets/blogs/blog6.jpg";
 import blog7 from "../assets/blogs/blog7.jpg";
 import blog8 from "../assets/blogs/blog8.jpg";
-import type { Address, Blog, Book, Category, Order } from "../interface/data";
+import type { Address, Blog, Book, Category, Order } from "../types/data";
 
 export const categories: Category[] = [
   {

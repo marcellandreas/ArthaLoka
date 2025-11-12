@@ -5,7 +5,7 @@ import type {
   Book,
   ShopContextProviderProps,
   ShopContextType,
-} from "../interface/data";
+} from "../types/data";
 
 export const ShopContext = createContext<ShopContextType | undefined>(
   undefined

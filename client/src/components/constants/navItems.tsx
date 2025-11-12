@@ -8,7 +8,7 @@ import type {
   linkSectionsFooterProps,
   NavItemAdmin,
   NavItemUser,
-} from "../../interface/navigation";
+} from "../../types/navigation";
 
 export const navItemsAdmin: NavItemAdmin[] = [
   { path: "/admin", label: "Add Item", icon: <FaSquarePlus /> },
