@@ -1,19 +1,10 @@
-import React from "react";
-import { useShopContext } from "../../contexts/ShopContext";
-import { FaSquarePlus } from "react-icons/fa6";
-import { FaListAlt } from "react-icons/fa";
-import { MdFactCheck } from "react-icons/md";
-import { Link, NavLink } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
+import { Link, NavLink } from "react-router-dom";
+import { navItemsAdmin } from "../constants/navItems";
 
 const Sidebar = () => {
-  const { navigate } = useShopContext();
+  const navItems = navItemsAdmin;
 
-  const navItems = [
-    { path: "/admin", label: "Add Item", icon: <FaSquarePlus /> },
-    { path: "/admin/list", label: "List", icon: <FaListAlt /> },
-    { path: "/admin/orders", label: "Orders", icon: <MdFactCheck /> },
-  ];
   return (
     <div className=" mx-auto max-w-[1440px] flex flex-col sm:flex-row">
       {/* sidebar */}
