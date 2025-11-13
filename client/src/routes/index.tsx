@@ -9,8 +9,13 @@ import Cart from "../pages/Cart";
 import AddressForm from "../pages/AddressForm";
 import MyOders from "../pages/MyOders";
 import { useShopContext } from "../contexts/ShopContext";
+
+// Admin Section Import
 import Sidebar from "../components/navigation/Sidebar";
 import AdminLogin from "../components/admin/auth/AdminLogin";
+import AdminProductList from "../pages/admin/AdminProductList";
+import AdminAddProduct from "../pages/admin/AdminAddProduct";
+import AdminOrders from "../pages/admin/AdminOrders";
 
 const AppRouter = () => {
   const { isAdmin } = useShopContext();
@@ -25,7 +30,11 @@ const AppRouter = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/address-form" element={<AddressForm />} />
       <Route path="/my-orders" element={<MyOders />} />
-      <Route path="/admin" element={isAdmin ? <Sidebar /> : <AdminLogin />} />
+      <Route path="/admin" element={isAdmin ? <Sidebar /> : <AdminLogin />}>
+        <Route index element={isAdmin ? <AdminAddProduct /> : null} />
+        <Route path="list" element={<AdminProductList />} />
+        <Route path="orders" element={<AdminOrders />} />
+      </Route>
     </Routes>
   );
 };
